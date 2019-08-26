@@ -44,6 +44,8 @@ def gen_html():
     else:
         dir_list = sorted(dir_list, key=lambda x: os.path.getctime(os.path.join(os.path.split(os.path.realpath(__file__))[0] + '/images', x)))
         for filename in dir_list:
+            if not filename.endswith('.jpg'):
+                continue
             print '<div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="images/{}" class="img-responsive lazyload" width="1117" height="628"></div>'.format(filename)
 
 
