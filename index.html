@@ -1,40 +1,45 @@
 <html lang="en-US">
   <head>
   	<title>Daily Bing Wallpaper</title>
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.min.css">
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js"></script>
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<style>
-  		.swiper-container {
-		    width: 100%;
-		    height: 100%;
-		}
+  		.col-md-4 {padding: 0;}
   	</style>
-  	<script>
-	  var mySwiper = new Swiper ('.swiper-container', {
-	    // Optional parameters
-	    direction: 'horizontal',
-	    loop: true,
-	    // Navigation arrows
-	    navigation: {
-	      nextEl: '.swiper-button-next',
-	      prevEl: '.swiper-button-prev',
-	    }
-	  })
-  </script>
   </head>
   <body>
-  	<!-- Slider main container -->
-	<div class="swiper-container">
-	    <!-- Additional required wrapper -->
-	    <div class="swiper-wrapper">
-	        <!-- Slides -->
-	        <div class="swiper-slide">Slide 1</div>
-	        <div class="swiper-slide">Slide 2</div>
-	        <div class="swiper-slide">Slide 3</div>
-	    </div>
-	    <!-- If we need navigation buttons -->
-	    <div class="swiper-button-prev"></div>
-	    <div class="swiper-button-next"></div>
+  	<div class="container-fluid">
+	  <div class="row">
+	  	<div class="col-md-4">
+	  		<img src="images/20190826.jpg" class="img-responsive">
+	  	</div>
+		<div class="col-md-4">
+			<img src="images/20190825.jpg" class="img-responsive">
+		</div>
+		<div class="col-md-4">
+			<img src="images/20190824.jpg" class="img-responsive">
+		</div>
+	  </div>
+	  <div class="row">
+	  	<div class="col-md-4">
+	  		<img src="images/20190823.jpg" class="img-responsive">
+	  	</div>
+		<div class="col-md-4">
+			<img src="images/20190822.jpg" class="img-responsive">
+		</div>
+		<div class="col-md-4">
+			<img src="images/20190821.jpg" class="img-responsive">
+		</div>
+	  </div>
+	  <div class="row">
+	  	<div class="col-md-4">
+	  		<img src="images/20190820.jpg" class="img-responsive">
+	  	</div>
+		<div class="col-md-4">
+			<img src="images/20190819.jpg" class="img-responsive">
+		</div>
+		<div class="col-md-4">
+		</div>
+	  </div>
 	</div>
   </body>
 </html>
