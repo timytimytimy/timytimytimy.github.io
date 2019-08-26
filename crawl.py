@@ -42,7 +42,7 @@ def gen_html():
     if not dir_list:
         return
     else:
-        dir_list = sorted(dir_list, key=lambda x: os.path.getctime(os.path.join(os.path.split(os.path.realpath(__file__))[0] + '/images', x)))
+        dir_list = sorted(dir_list, key=lambda x: os.path.getctime(os.path.join(os.path.split(os.path.realpath(__file__))[0] + '/images', x)), reverse=True)
         for filename in dir_list:
             if not filename.endswith('.jpg'):
                 continue
@@ -51,3 +51,4 @@ def gen_html():
 
 if __name__ == '__main__':
     crawl_daily()
+    gen_html()
