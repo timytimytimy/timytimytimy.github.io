@@ -41,4 +41,4 @@ def gen_html():
 
 
 if __name__ == '__main__':
-    gen_html()
+    crawl_daily()
