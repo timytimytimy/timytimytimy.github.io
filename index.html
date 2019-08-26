@@ -1,4 +1,40 @@
 <html lang="en-US">
-  <head></head>
-  <body>test</body>
+  <head>
+  	<title>Daily Bing Wallpaper</title>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.min.css">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js"></script>
+  	<style>
+  		.swiper-container {
+		    width: 100%;
+		    height: 100%;
+		}
+  	</style>
+  	<script>
+	  var mySwiper = new Swiper ('.swiper-container', {
+	    // Optional parameters
+	    direction: 'horizontal',
+	    loop: true,
+	    // Navigation arrows
+	    navigation: {
+	      nextEl: '.swiper-button-next',
+	      prevEl: '.swiper-button-prev',
+	    }
+	  })
+  </script>
+  </head>
+  <body>
+  	<!-- Slider main container -->
+	<div class="swiper-container">
+	    <!-- Additional required wrapper -->
+	    <div class="swiper-wrapper">
+	        <!-- Slides -->
+	        <div class="swiper-slide">Slide 1</div>
+	        <div class="swiper-slide">Slide 2</div>
+	        <div class="swiper-slide">Slide 3</div>
+	    </div>
+	    <!-- If we need navigation buttons -->
+	    <div class="swiper-button-prev"></div>
+	    <div class="swiper-button-next"></div>
+	</div>
+  </body>
 </html>
