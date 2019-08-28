@@ -39,6 +39,9 @@ def gen_html():
   <head>
   	<title>Hi</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:image" content="images/%s" />
+    <meta property="og:site_name" content="clover123" />
+    <meta property="og:description" content="" />
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<style>
   		.col-md-4 {padding: 0;}
@@ -66,7 +69,7 @@ def gen_html():
         if not filename.endswith('.jpg'):
             continue
         repl += '<div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="images/{}" class="img-responsive lazyload" width="1920" height="1080"></div>\n'.format(filename)
-    html = html_tpl % repl
+    html = html_tpl % (dir_list[0], repl)
     with open('index.html', 'w') as f:
         f.write(html)
 
