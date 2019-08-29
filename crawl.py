@@ -29,9 +29,10 @@ def crawl_daily():
     with open(filename, 'wb') as file:
         file.write(rsp.content)
     print 'save image to', filename
+    return title
 
 
-def gen_html():
+def gen_html(title):
     import os
     import re
     html_tpl = '''
@@ -43,7 +44,7 @@ def gen_html():
     <meta property="og:type" content="webpage" />
     <meta property="og:site_name" content="clover123" />
     <meta property="og:url" content="https://clover123.cn" />
-    <meta property="og:title" content="Daliy Wallpaper for me." />
+    <meta property="og:title" content="%s" />
     <meta property="og:description" content="" />
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<style>
@@ -72,11 +73,11 @@ def gen_html():
         if not filename.endswith('.jpg'):
             continue
         repl += '<div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="images/{}" class="img-responsive lazyload" width="1920" height="1080"></div>\n'.format(filename)
-    html = html_tpl % (dir_list[0], repl)
+    html = html_tpl % (dir_list[0], title, repl)
     with open('index.html', 'w') as f:
         f.write(html)
 
 
 if __name__ == '__main__':
-    crawl_daily()
-    gen_html()
+    title = crawl_daily()
+    gen_html(title)
