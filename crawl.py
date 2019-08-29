@@ -39,8 +39,11 @@ def gen_html():
   <head>
   	<title>Hi</title>
   	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta property="og:image" content="images/%s" />
+    <meta property="og:image" content="https://clover123.cn/images/%s" />
+    <meta property="og:type" content="webpage" />
     <meta property="og:site_name" content="clover123" />
+    <meta property="og:url" content="https://clover123.cn" />
+    <meta property="og:title" content="Daliy Wallpaper for me." />
     <meta property="og:description" content="" />
   	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   	<style>
