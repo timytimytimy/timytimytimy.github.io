@@ -1,4 +1,6 @@
 import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 import requests
 import urlparse
 
@@ -35,7 +37,7 @@ def crawl_daily():
 def gen_html(title):
     import os
     import re
-    html_tpl = '''
+    html_tpl = u'''
 <html lang="en-US">
   <head>
   	<title>Hi</title>
