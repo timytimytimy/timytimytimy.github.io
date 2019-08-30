@@ -51,8 +51,10 @@ def gen_html(title):
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
   		.col-md-4 {padding: 0;}
-  		#download {display: block; line-height: 30px;text-align: center;height: 30px; width: 100px; background:rgba(255,255,255,0.8);position: fixed;right: 50px;bottom: 25px;border-radius:5px;}
-  	</style>
+  		#download {display: block; line-height: 30px;text-align: center;width: 100px; background:rgba(255,255,255,0.8);position: fixed;right: 50px;bottom: 25px;border-radius:5px;padding-left:10px;padding-right:10px;}
+  	    .download-btn {display:block;font-size:1.5rem;height:2rem;width:2rem;position:absolute;right:10px;bottom:10px;border-radius:5px;background:rgba(255,255,255,0.8);text-align: center;}
+        .download-btn::before {color:#007bff;line-height: 2rem;}
+    </style>
   	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
   </head>
   <body>
@@ -74,7 +76,7 @@ def gen_html(title):
     for filename in dir_list:
         if not filename.endswith('.jpg'):
             continue
-        repl += '<div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="images/{}" class="img-fluid lazyload" width="1920" height="1080"></div>\n'.format(filename)
+        repl += '<div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="images/{}" class="img-fluid lazyload" width="1920" height="1080"><a class="download-btn fas fa-arrow-down" href="images/{}"></a></div>\n'.format(filename, filename)
     html = html_tpl % (dir_list[0], title, repl)
     with open('index.html', 'w') as f:
         f.write(html)
