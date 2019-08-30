@@ -52,7 +52,7 @@ def gen_html(title):
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <style>
   		.col-md-4 {padding: 0;}
-  		#download {display: block; line-height: 30px;text-align: center;width: 100px; background:rgba(255,255,255,0.8);position: fixed;right: 50px;bottom: 25px;border-radius:5px;padding-left:10px;padding-right:10px;}
+  		#download {display: block; line-height: 30px;text-align: center;font-size:1rem;background:rgba(255,255,255,0.8);position: fixed;right: 50px;bottom: 25px;border-radius:5px;padding-left:10px;padding-right:10px;}
   	    .download-btn {display:block;font-size:1.5rem;height:2rem;width:2rem;position:absolute;right:10px;bottom:10px;border-radius:5px;background:rgba(255,255,255,0.8);text-align: center;}
         .download-btn::before {color:#007bff;line-height: 2rem;}
     </style>
