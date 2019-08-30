@@ -74,7 +74,7 @@ def gen_html(title):
     for filename in dir_list:
         if not filename.endswith('.jpg'):
             continue
-        repl += '<div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="images/{}" class="img-responsive lazyload" width="1920" height="1080"></div>\n'.format(filename)
+        repl += '<div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="images/{}" class="img-fluid lazyload" width="1920" height="1080"></div>\n'.format(filename)
     html = html_tpl % (dir_list[0], title, repl)
     with open('index.html', 'w') as f:
         f.write(html)
