@@ -20,7 +20,7 @@ def crawl_all():
 
 
 def crawl_daily():
-    url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=-1&n=1&pid=hp&mkt=zh-CN'
+    url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&pid=hp&mkt=zh-CN'
     data = requests.get(url).json()
     image_data = data['images'][0]
     img_url = urlparse.urljoin(url, image_data['url'])
