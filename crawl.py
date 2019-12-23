@@ -80,8 +80,6 @@ def gen_html(title):
     dir_list = sorted(dir_list, key=lambda x: os.path.getctime(os.path.join(os.path.split(os.path.realpath(__file__))[0] + '/images', x)), reverse=True)
     repl = ''
     for filename in dir_list:
-        if not filename.endswith('.jpg') or not filename.endswith('.png'):
-            continue
         repl += '<div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-src="images/{}" class="img-fluid lazyload" width="1920" height="1080"><a class="download-btn fas fa-arrow-down" href="images/{}"></a></div>\n'.format(filename, filename)
     html = html_tpl % (dir_list[0], title, repl)
     with codecs.open('index.html', 'w') as f:
